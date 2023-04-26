@@ -30,6 +30,7 @@ public class JavaApplication20 {
          othersubject1results= scanner.nextInt();
 
         int othersubject2results ;
+        //print statement is repeated
         System.out.println("Enter math results: ");
         othersubject2results = scanner.nextInt();
 
