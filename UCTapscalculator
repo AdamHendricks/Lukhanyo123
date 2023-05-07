@@ -49,8 +49,8 @@ public class UCTCalculatorAPS {
          int f = Integer.parseInt(subject6);
          
          
-         
-         int WPS =  a + b + c + d + e + f ;
+         //Disadvantage factor not accounted for
+         int WPS =  a + b + c + d + e + f ; 
          
          String message = "Your WPS is :" + WPS;
          
