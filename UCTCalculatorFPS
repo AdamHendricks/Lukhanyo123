@@ -10,21 +10,30 @@ public class JavaApplication20 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        //1. change Subject1 variable name to "mathType". Calling it subject1
         String Subject1;
         System.out.println("Enter First subject (Mathematics/Mathematical Literacy/Technical Methematics) : ");
         Subject1 = scanner.next();
         
+        //1. Change subject1 variable to "mathResult"
         int subject1;
         System.out.println("Enter First subject results: ");
         subject1 = scanner.nextInt();
         
+        //1. Change Subject2 variable to "englishType"
         String Subject2;
         System.out.println("Enter Second subject (EnglishHL/EnglishFAL) : ");
         Subject2 = scanner.next();
         
+        //1. Change subject2 variable to "englishResult"
         int subject2 ;
         System.out.println("Enter Second subject results: ");
         subject2 = scanner.nextInt();
+        
+        //2. Since you are not making use of objects, you should make use of a parallel array.
+        //Example: 
+        //String [] subjects = new String [5];
+        //int [] results = new int [5];
         
         String Subject3;
         System.out.println("Enter Third subject : ");
@@ -61,12 +70,15 @@ public class JavaApplication20 {
 
         int FPS =  subject1 + subject2 + subject3 + subject4 + subject5 + subject6 ;
         
-       
+       //In the case of UCT and South African applicants it will be "WPS score"
         System.out.println("Your APS score is: " + FPS);
         System.out.println("   ");
         System.out.println("Guranteed admission to :");
         System.out.println("----------------------------------");
         
+        //3. Your print statement says "Guaranteed admission", but your || or condition includes requirements for probable admission. For this faculty Bachelor of Business Science and Bachelor of Commerce
+        //just focus on "Minimum required for possible admission"
+        //FPS >= 480 has to included on both ends of the || condition
         if("Mathematics".equals(Subject1) && subject1 >= 60 && "EnglishFAL".equals(Subject2) && subject2 >= 60 || "EnglishHL".equals(Subject2) && subject2 >= 50 && FPS>=480  ){
             System.out.println("Bachelor of Business Science and Bachelor of Commerce : Accounting "
                     + "Economics"
@@ -81,6 +93,10 @@ public class JavaApplication20 {
         }else if ("Mathematics".equals(Subject1) && subject1 >= 80 && "EnglishFAL".equals(Subject2) && subject2 >= 80 || "EnglishHL".equals(Subject2) && subject2 >= 60 && FPS >=500  ){
             System.out.println("Bachelor of Business Science and Bachelor of Commerce : Acturial Science"
                     + "Finance");
+        //4. ideally I would prefer to see your conditions as follows for probable admission:
+        //if((mathType.equals("Mathematics") && mathResult >= 60) && (englishType.equals(EnglishHL) >= 50 || englishType.equals(EnglishFAL) >= 60) && (WPS >= 470)){
+          System.out.println("You qualify for...");
+        }
  }
         
            
